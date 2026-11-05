@@ -452,3 +452,13 @@ h1 em,h2 em{font-style:normal;color:var(--gold-light)}
 }
 .notfound .container{width:min(var(--container),calc(100% - 56px))}.notfound .code{text-align:center}
 .notfound .code{max-width:none;margin:0 0 6px}
+
+.hero-art{width:100%;height:auto;border-radius:16px;border:1px solid var(--line-gold);box-shadow:0 50px 100px rgba(0,0,0,.55)}
+.hp-field{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.form-status.is-error{color:#f0a49a}
+.form-status a{text-decoration:underline;text-underline-offset:3px}
+.form-success{padding:44px 12px;text-align:center}
+.form-success .i{width:56px;height:56px;padding:14px;margin:0 auto 22px;border-radius:50%;border:1px solid var(--line-gold);color:var(--gold-light)}
+.form-success h3{font-size:26px;margin-bottom:12px}
+.form-success p{margin:0 auto;max-width:420px;color:var(--muted)}
+.button[disabled]{opacity:.6;cursor:progress;transform:none}

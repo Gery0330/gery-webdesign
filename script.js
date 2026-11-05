@@ -3,7 +3,7 @@
 (function () {
   "use strict";
 
-  var CONTACT_MAIL = "kontakt@gery-webdesign.at";
+  var CONTACT_MAIL = "gery.webdesign@gmail.com";
 
   /* ---------- Mobiles Menü ---------- */
   var header = document.querySelector(".site-header");
@@ -96,29 +96,39 @@
     });
   });
 
-  /* ---------- Kontaktformular (öffnet das E-Mail-Programm) ---------- */
+  /* ---------- Kontaktformular: öffnet Gmail mit vorbereiteter Nachricht ---------- */
   var form = document.getElementById("contact-form");
   var status = document.getElementById("form-status");
+
   if (form) {
     form.addEventListener("submit", function (event) {
       event.preventDefault();
       if (!form.reportValidity()) return;
+      if (form.elements._honey && form.elements._honey.value) return; // Spam-Falle
 
-      var data = new FormData(form);
-      var get = function (k) { return String(data.get(k) || "").trim(); };
-      var name = get("name");
-      var pkg = get("package");
-
-      var subject = "Website-Anfrage von " + name + (pkg ? " (" + pkg + ")" : "");
+      var g = function (k) { return String(form.elements[k].value || "").trim(); };
+      var pkg = g("package");
+      var subject = "Website-Anfrage von " + g("name") + (pkg ? " (" + pkg + ")" : "");
       var body =
-        "Name: " + name + "\n" +
-        "E-Mail: " + get("email") + "\n" +
-        "Unternehmen: " + (get("company") || "Nicht angegeben") + "\n" +
+        "Name: " + g("name") + "\n" +
+        "E-Mail: " + g("email") + "\n" +
+        "Unternehmen: " + (g("company") || "Nicht angegeben") + "\n" +
         "Paket: " + (pkg || "Noch offen") + "\n\n" +
-        "Nachricht:\n" + get("message");
+        "Nachricht:\n" + g("message");
 
-      if (status) status.textContent = "Dein E-Mail-Programm wird geöffnet. Bitte sende die vorbereitete Nachricht dort ab.";
-      window.location.href = "mailto:" + CONTACT_MAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+      var url = "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(CONTACT_MAIL) +
+        "&su=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+
+      var win = window.open(url, "_blank");
+      if (win) win.opener = null;
+      status.classList.remove("is-error");
+      if (win) {
+        status.textContent = "Gmail wurde in einem neuen Tab geöffnet. Bitte sende die vorbereitete Nachricht dort ab.";
+      } else {
+        status.classList.add("is-error");
+        status.innerHTML = 'Der Browser hat das neue Fenster blockiert. <a href="' + url.replace(/&/g, "&amp;") +
+          '" target="_blank" rel="noopener">Hier klicken, um Gmail zu öffnen</a>.';
+      }
     });
   }
 })();
