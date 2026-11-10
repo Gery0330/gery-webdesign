@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="770" viewBox="-60 -10 1320 770">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2b3020"/><stop offset="1" stop-color="#4a5339"/></linearGradient>
+<linearGradient id="a1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9a27c"/><stop offset=".55" stop-color="#8a4a2e"/><stop offset="1" stop-color="#3a2418"/></linearGradient>
+<linearGradient id="a2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8c9a6c"/><stop offset="1" stop-color="#3f4733"/></linearGradient>
+<radialGradient id="glow" cx=".8" cy=".35" r=".6"><stop offset="0" stop-color="#e1b08e" stop-opacity=".35"/><stop offset="1" stop-color="#e1b08e" stop-opacity="0"/></radialGradient>
+<path id="c" d="M0 0m-52 0a52 52 0 1 1 104 0a52 52 0 1 1-104 0"/>
+</defs>
+<rect x="-60" y="-10" width="1320" height="780" fill="url(#bg)"/><rect x="-60" y="-10" width="1320" height="780" fill="url(#glow)"/>
+<!-- nav -->
+<g font-family="Georgia,'Times New Roman',serif" fill="#f5f1e8">
+<circle cx="86" cy="62" r="19" fill="none" stroke="#f5f1e8" stroke-width="1.5"/><path d="M86 72c-1-7 1-13 8-17-1 8-3 13-8 17Zm0 0c0-5-2-9-7-11 0 6 3 9 7 11Z" fill="#e1b08e"/>
+<text x="116" y="70" font-size="27" font-weight="700" letter-spacing="1">ATELIER <tspan fill="#e1b08e">NOIR</tspan></text>
+<g font-family="Arial,sans-serif" font-size="14" font-weight="700" letter-spacing=".6"><text x="640" y="68" fill="#e1b08e">Start</text><text x="715" y="68">Speisekarte</text><text x="830" y="68">Events</text><text x="905" y="68">Einblicke</text></g>
+<rect x="990" y="42" width="130" height="40" rx="20" fill="#b96845"/><text x="1055" y="67" font-family="Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1">TISCH ANFRAGEN</text>
+<!-- headline -->
+<text x="86" y="200" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="4" fill="#e1b08e">— SAISONAL · REGIONAL · MIT LIEBE</text>
+<text x="86" y="300" font-size="94" font-weight="700" letter-spacing="-3">Ein Abend,</text>
+<text x="86" y="395" font-size="94" font-weight="700" letter-spacing="-3">der in <tspan font-style="italic" font-weight="400" fill="#e1b08e">Erinnerung</tspan></text>
+<text x="86" y="490" font-size="94" font-weight="700" letter-spacing="-3">bleibt.</text>
+</g>
+<!-- arches -->
+<g>
+<path d="M760 560V330a130 130 0 0 1 260 0v230Z" fill="url(#a1)" transform="translate(40 -60)"/>
+<path d="M740 620V540a95 95 0 0 1 190 0v80Z" fill="url(#a2)" stroke="#2b3020" stroke-width="10" transform="translate(-30 50)"/>
+<!-- plate -->
+<g transform="translate(900 235)"><circle r="82" fill="#f5f1e8" opacity=".95"/><circle r="62" fill="none" stroke="#c9bfa7" stroke-width="2"/><circle cx="-8" cy="4" r="26" fill="#b96845"/><circle cx="22" cy="-12" r="14" fill="#788267"/><circle cx="12" cy="24" r="9" fill="#e1b08e"/><path d="M-30-30q14-16 30-4" stroke="#596348" stroke-width="5" fill="none" stroke-linecap="round"/></g>
+<!-- badge -->
+<g transform="translate(1085 520)"><circle r="68" fill="#fffdf8"/><text font-family="Arial,sans-serif" font-weight="700" letter-spacing="2.2" font-size="9.5" fill="#596348"><textPath href="#c">SEIT 2014 · SAISONAL · REGIONAL · MIT LIEBE ·</textPath></text><text text-anchor="middle" y="10" font-family="Georgia,serif" font-style="italic" font-size="30" fill="#b96845">AN</text></g>
+</g>
+<!-- booking bar -->
+<g font-family="Arial,sans-serif"><rect x="86" y="560" width="640" height="82" rx="20" fill="#fffdf8"/>
+<g font-size="10" font-weight="700" letter-spacing="2" fill="#77776c"><text x="116" y="590">DATUM</text><text x="290" y="590">PERSONEN</text><text x="444" y="590">BEREICH</text></g>
+<g font-size="16" font-weight="700" fill="#25271f"><text x="116" y="619">06.11.2026</text><text x="290" y="619">2 Personen</text><text x="444" y="619">Innenraum</text></g>
+<rect x="580" y="572" width="134" height="58" rx="14" fill="#b96845"/><text x="647" y="607" font-size="11" font-weight="700" text-anchor="middle" fill="#fff" letter-spacing="1">PRÜFEN ↗</text></g>
+<!-- marquee -->
+<g transform="rotate(-2 600 725)"><rect x="-120" y="700" width="1440" height="64" fill="#b96845"/><text x="60" y="743" font-family="Georgia,serif" font-style="italic" font-size="28" fill="#fff" xml:space="preserve">Saisonale Küche   ✦   Regionale Produkte   ✦   Österreichischer Wein   ✦   Handwerk &amp; Geduld   ✦   Saisonale Küche</text></g>
+</svg>
